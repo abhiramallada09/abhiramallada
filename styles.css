@@ -446,7 +446,7 @@ nav a{
 .badge.view {
   position: absolute;
   right: 0px; /* Position the badge to the right */
-  top: 50%;
+  top: 150%;
 }
 
 }
