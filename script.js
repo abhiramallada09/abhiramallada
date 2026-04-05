@@ -1,5 +1,28 @@
 document.addEventListener("DOMContentLoaded", function()
 {
+    /* Theme Toggle */
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const themeIcon = themeToggleBtn.querySelector("i");
+    
+    // Check local storage for theme
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+        document.body.classList.add("dark-theme");
+        themeIcon.classList.replace("ri-moon-line", "ri-sun-line");
+    }
+
+    themeToggleBtn.addEventListener("click", function() {
+        document.body.classList.toggle("dark-theme");
+        let theme = "light";
+        if (document.body.classList.contains("dark-theme")) {
+            theme = "dark";
+            themeIcon.classList.replace("ri-moon-line", "ri-sun-line");
+        } else {
+            themeIcon.classList.replace("ri-sun-line", "ri-moon-line");
+        }
+        localStorage.setItem("theme", theme);
+    });
+
     /* Typing Effect */
     const typing = document.querySelector(".typing");
     const text = "Cybersecurity | Python Developer | Ethical Hacker";
@@ -13,50 +36,73 @@ document.addEventListener("DOMContentLoaded", function()
             setTimeout(typeEffect,60);
         }
     }
-    typeEffect();
-    /* Scroll Reveal */
+    // Only run if empty to avoid repeating on resize/SPA navigation
+    if (typing && typing.textContent === "") {
+        typeEffect();
+    }
+
+    /* SPA Navigation */
     const sections = document.querySelectorAll(".section");
-    const observer = new IntersectionObserver(entries=>
-    {
-        entries.forEach(entry=>
-        {
-            if(entry.isIntersecting)
-            {
-                entry.target.classList.add("show");
-            }
+    const navLinks = document.querySelectorAll("#nav-links a");
+
+    function navigateTo(hash) {
+        if (!hash || hash === "#") hash = "#home";
+        
+        // Hide all sections
+        sections.forEach(section => {
+            section.classList.remove("active");
         });
-    },{threshold:0.2});
-    sections.forEach(section=>
-    {
-        observer.observe(section);
+
+        // Remove active class from nav links
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+        });
+
+        // Show target section
+        const targetSection = document.querySelector(hash);
+        if (targetSection) {
+            targetSection.classList.add("active");
+            
+            // Add active class to corresponding nav link
+            const activeLink = document.querySelector(`#nav-links a[href="${hash}"]`);
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+            
+            // Scroll to top of section for SPA feel
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }
+
+    // Listen to hash changes
+    window.addEventListener("hashchange", () => {
+        navigateTo(window.location.hash);
     });
+
+    // Initial navigation
+    navigateTo(window.location.hash);
+
     /* Mobile Menu */
     const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    const navLinksContainer = document.getElementById("nav-links");
     toggle.addEventListener("click", function () 
     {
-        navLinks.classList.toggle("active");
+        navLinksContainer.classList.toggle("active");
     });
+    
     // Close menu when clicking any link
     document.querySelectorAll("#nav-links a").forEach(function(link) 
     {
         link.addEventListener("click", function () 
         {
-            navLinks.classList.remove("active");
+            navLinksContainer.classList.remove("active");
         });
-    });
-    /* Logo Scroll Top */
-    document.querySelector(".logo").addEventListener("click",function(e)
-    {
-        e.preventDefault();
-        window.scrollTo({top:0,behavior:"smooth"});
     });
     
 });
 
 /* email */
 function sendEmail() {
-
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
     let message = document.getElementById("message").value.trim();
@@ -75,10 +121,6 @@ function sendEmail() {
     emailjs.send("service_92wxlsr", "template_hq27jvh", params)
         .then(() => {
             alert("Email sent successfully!");
-                // Clear form fields after successful submission
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("message").value = "";
         })
         .catch((error) => {
             console.error("Error sending email:", error);
