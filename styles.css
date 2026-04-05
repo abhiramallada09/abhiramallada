@@ -431,6 +431,7 @@ body.dark-theme .btn:hover {
     color: var(--primary-color);
     font-size: 1.5rem;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .project-card:hover .project-title {
