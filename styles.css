@@ -628,6 +628,12 @@ h4 {
         grid-template-columns: 1fr;
     }
 
+    .badge.ongoing {
+        position: static;
+        width: fit-content;
+        margin: auto auto auto;
+    }
+
     .badge.view {
         position: static;
         display: block;

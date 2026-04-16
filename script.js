@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", function()
-{
+document.addEventListener("DOMContentLoaded", function () {
     /* Theme Toggle */
     const themeToggleBtn = document.getElementById("theme-toggle");
     const themeIcon = themeToggleBtn.querySelector("i");
-    
+
     // Check local storage for theme
     const currentTheme = localStorage.getItem("theme");
     if (currentTheme === "dark") {
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function()
         themeIcon.classList.replace("ri-moon-line", "ri-sun-line");
     }
 
-    themeToggleBtn.addEventListener("click", function() {
+    themeToggleBtn.addEventListener("click", function () {
         document.body.classList.toggle("dark-theme");
         let theme = "light";
         if (document.body.classList.contains("dark-theme")) {
@@ -27,13 +26,11 @@ document.addEventListener("DOMContentLoaded", function()
     const typing = document.querySelector(".typing");
     const text = "Cybersecurity | Python Developer | Ethical Hacker";
     let index = 0;
-    function typeEffect()
-    {
-        if(index < text.length)
-        {
+    function typeEffect() {
+        if (index < text.length) {
             typing.textContent += text.charAt(index);
             index++;
-            setTimeout(typeEffect,60);
+            setTimeout(typeEffect, 60);
         }
     }
     // Only run if empty to avoid repeating on resize/SPA navigation
@@ -47,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function()
 
     function navigateTo(hash) {
         if (!hash || hash === "#") hash = "#home";
-        
+
         // Hide all sections
         sections.forEach(section => {
             section.classList.remove("active");
@@ -62,13 +59,13 @@ document.addEventListener("DOMContentLoaded", function()
         const targetSection = document.querySelector(hash);
         if (targetSection) {
             targetSection.classList.add("active");
-            
+
             // Add active class to corresponding nav link
             const activeLink = document.querySelector(`#nav-links a[href="${hash}"]`);
             if (activeLink) {
                 activeLink.classList.add("active");
             }
-            
+
             // Scroll to top of section for SPA feel
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
@@ -85,20 +82,17 @@ document.addEventListener("DOMContentLoaded", function()
     /* Mobile Menu */
     const toggle = document.getElementById("menu-toggle");
     const navLinksContainer = document.getElementById("nav-links");
-    toggle.addEventListener("click", function () 
-    {
+    toggle.addEventListener("click", function () {
         navLinksContainer.classList.toggle("active");
     });
-    
+
     // Close menu when clicking any link
-    document.querySelectorAll("#nav-links a").forEach(function(link) 
-    {
-        link.addEventListener("click", function () 
-        {
+    document.querySelectorAll("#nav-links a").forEach(function (link) {
+        link.addEventListener("click", function () {
             navLinksContainer.classList.remove("active");
         });
     });
-    
+
 });
 
 /* email */
@@ -118,7 +112,7 @@ function sendEmail() {
         message: message
     };
 
-    emailjs.send("service_92wxlsr", "template_hq27jvh", params)
+    emailjs.send("service_5qkxb1h", "template_c1rvhnf", params)
         .then(() => {
             alert("Email sent successfully!");
         })
