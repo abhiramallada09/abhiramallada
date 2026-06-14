@@ -93,16 +93,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", sendEmail);
+    }
+
 });
 
 /* email */
-function sendEmail() {
+function sendEmail(event) {
+    if (event) {
+        event.preventDefault();
+    }
+
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
     let message = document.getElementById("message").value.trim();
+    let formStatus = document.getElementById("form-status");
+    let submitButton = document.querySelector("#contact-form button[type='submit']");
 
     if (name === "" || email === "" || message === "") {
-        alert("Please fill all fields before submitting.");
+        if (formStatus) {
+            formStatus.textContent = "Please fill all fields before submitting.";
+        }
         return;
     }
 
@@ -112,12 +125,31 @@ function sendEmail() {
         message: message
     };
 
+    if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+    }
+    if (formStatus) {
+        formStatus.textContent = "Sending your message...";
+    }
+
     emailjs.send("service_5qkxb1h", "template_c1rvhnf", params)
         .then(() => {
-            alert("Email sent successfully!");
+            if (formStatus) {
+                formStatus.textContent = "Email sent successfully!";
+            }
+            document.getElementById("contact-form").reset();
         })
         .catch((error) => {
             console.error("Error sending email:", error);
-            alert("Failed to send email. Please try again later.");
+            if (formStatus) {
+                formStatus.textContent = "Failed to send email. Please try again later.";
+            }
+        })
+        .finally(() => {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+            }
         });
 }
