@@ -41,6 +41,25 @@ cd abhiramallada
 
 Then open `index.html`.
 
+## Deploy to Firebase Hosting
+
+Install or update the Firebase CLI, then log in:
+
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+Create a Firebase project at https://console.firebase.google.com/ if you do not already have one.
+
+Deploy this static site from the project folder:
+
+```bash
+firebase deploy --only hosting --project iamabhiramallada
+```
+
+After deployment, Firebase will print the live hosting URL.
+
 ## Contact
 
 - Email: alladaabhiram@gmail.com
