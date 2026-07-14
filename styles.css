@@ -183,15 +183,15 @@ nav a.active {
 }
 
 .hero-left h3 {
-    margin: 8px 0 10px;
+    margin: 8px 0 1px;
     color: var(--secondary-color);
     min-height: 28px;
     margin-bottom: 3px;
 }
 
 .hero-right img {
-    width: 450px;
-    border-radius: 20px;
+    width: 350px;
+    border-radius: 25px;
     box-shadow: 10px 10px 5px var(--shadow-color);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 
