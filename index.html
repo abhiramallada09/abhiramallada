@@ -6,23 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="GLwnDzYV3DRoXvJ793sY9nS3Gx79ecEIt53hMYxgcBM" />
     <title>Abhiram Allada Portfolio</title>
-    <meta name="description" content="Official portfolio website of Abhiram Allada, a Computer Science Cybersecurity student focused on ethical hacking, secure systems, web development, and AI projects.">
-    <meta name="keywords" content="Abhiram Allada, Abhiram Allada portfolio, cybersecurity student, ethical hacking, web developer, AI projects, Ramachandra College of Engineering">
+    <meta name="description"
+        content="Official portfolio website of Abhiram Allada, a Computer Science Cybersecurity student focused on ethical hacking, secure systems, web development, and AI projects.">
+    <meta name="keywords"
+        content="Abhiram Allada, Abhiram Allada portfolio, cybersecurity student, ethical hacking, web developer, AI projects, Ramachandra College of Engineering">
     <meta name="author" content="Abhiram Allada">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://iamabhiramallada.web.app/">
+    <meta name="theme-color" content="#1e3a5f">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Abhiram Allada Portfolio">
-    <meta property="og:description" content="Explore Abhiram Allada's portfolio, projects, certifications, resume, and cybersecurity work.">
+    <meta property="og:description"
+        content="Explore Abhiram Allada's portfolio, projects, certifications, resume, and cybersecurity work.">
     <meta property="og:url" content="https://iamabhiramallada.web.app/">
     <meta property="og:image" content="https://iamabhiramallada.web.app/DSC_6404.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Abhiram Allada Portfolio">
-    <meta name="twitter:description" content="Official portfolio website of Abhiram Allada, Computer Science Cybersecurity student and developer.">
+    <meta name="twitter:description"
+        content="Official portfolio website of Abhiram Allada, Computer Science Cybersecurity student and developer.">
     <meta name="twitter:image" content="https://iamabhiramallada.web.app/DSC_6404.jpg">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e3a5f'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial, sans-serif' font-size='28' font-weight='700' fill='white'%3EAA%3C/text%3E%3C/svg%3E">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e3a5f'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial, sans-serif' font-size='28' font-weight='700' fill='white'%3EAA%3C/text%3E%3C/svg%3E">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -52,51 +58,179 @@
             }
         }
     </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <!-- Initialize EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            emailjs.init(
-                {
-                    publicKey: "ldeou5RMxdtVjdKMv",
-                    // Replace with your actual public key from EmailJS
-                });
+            emailjs.init({
+                publicKey: "ldeou5RMxdtVjdKMv"
+            });
         })();
     </script>
-
 </head>
 
 <body>
 
     <div class="progress-bar"></div>
 
+    <!-- TOP NAVBAR -->
     <header class="navbar">
         <a href="#home" class="logo">ABHIRAM ALLADA</a>
-
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav id="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#workshop">Workshop</a>
-            <a href="#contact">Contact</a>
+        <div class="header-right">
             <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode" title="Toggle Theme">
                 <i class="ri-moon-line"></i>
             </button>
-        </nav>
+        </div>
     </header>
 
-    <section id="home" class="hero section">
+    <!-- FLOATING GLASS BOTTOM NAVIGATION DOCK -->
+    <nav class="float-nav" role="navigation" aria-label="Main Navigation">
+        <!-- 1. Home -->
+        <button class="float-nav-item" data-target="#home" aria-label="Home">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span>Home</span>
+        </button>
+
+        <!-- 2. About -->
+        <button class="float-nav-item" data-target="#about" aria-label="About">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>About</span>
+        </button>
+
+        <!-- 3. Projects -->
+        <button class="float-nav-item" data-target="#projects" aria-label="Projects">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+                <path d="M8 10v4" />
+                <path d="M12 10v2" />
+                <path d="M16 10v6" />
+            </svg>
+            <span>Projects</span>
+        </button>
+
+        <!-- 4. Experience -->
+        <button class="float-nav-item" data-target="#experience" aria-label="Experience">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                <rect width="20" height="14" x="2" y="6" rx="2" />
+            </svg>
+            <span>Experience</span>
+        </button>
+
+        <!-- Desktop-Only Direct Items (Education, Skills, Certifications, Workshop, Contact) -->
+        <button class="float-nav-item nav-desktop-only" data-target="#education" aria-label="Education">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                <path d="M22 10v6" />
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+            </svg>
+            <span>Education</span>
+        </button>
+
+        <button class="float-nav-item nav-desktop-only" data-target="#skills" aria-label="Skills">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+            </svg>
+            <span>Skills</span>
+        </button>
+
+        <button class="float-nav-item nav-desktop-only" data-target="#certifications" aria-label="Certifications">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                <path d="m9 12 2 2 4-4" />
+            </svg>
+            <span>Certifications</span>
+        </button>
+
+        <button class="float-nav-item nav-desktop-only" data-target="#workshop" aria-label="Workshop">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h20" />
+                <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" />
+                <path d="m7 21 5-5 5 5" />
+            </svg>
+            <span>Workshop</span>
+        </button>
+
+        <button class="float-nav-item nav-desktop-only" data-target="#contact" aria-label="Contact">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span>Contact</span>
+        </button>
+
+        <!-- Mobile More Button -->
+        <button class="float-nav-item nav-mobile-only" id="more-btn" aria-label="More Sections" aria-haspopup="dialog"
+            aria-expanded="false">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="19" cy="12" r="1" />
+                <circle cx="5" cy="12" r="1" />
+            </svg>
+            <span>More</span>
+            <span class="more-active-dot" aria-hidden="true"></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MORE GLASS BOTTOM SHEET -->
+    <div class="more-backdrop" id="more-backdrop" role="presentation" tabindex="-1"></div>
+    <div class="more-panel" id="more-panel" role="dialog" aria-modal="true" aria-label="More Sections">
+        <div class="more-panel-handle" aria-hidden="true"></div>
+        <div class="more-panel-header">
+            <span class="more-panel-title">More Sections</span>
+            <button class="more-close-btn" id="more-close-btn" aria-label="Close menu">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <div class="more-panel-grid">
+            <button class="more-panel-item" data-target="#education">
+                <i class="ri-graduation-cap-line"></i>
+                <span>Education</span>
+            </button>
+            <button class="more-panel-item" data-target="#skills">
+                <i class="ri-code-s-slash-line"></i>
+                <span>Skills</span>
+            </button>
+            <button class="more-panel-item" data-target="#certifications">
+                <i class="ri-medal-line"></i>
+                <span>Certifications</span>
+            </button>
+            <button class="more-panel-item" data-target="#workshop">
+                <i class="ri-book-open-line"></i>
+                <span>Workshop</span>
+            </button>
+            <button class="more-panel-item" data-target="#contact">
+                <i class="ri-mail-send-line"></i>
+                <span>Contact</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SECTIONS (Original content & words preserved, upgraded UI)
+         ============================================================ -->
+
+    <!-- 1. HOME -->
+    <section id="home" class="hero section active">
         <div class="hero-left">
             <h1>ABHIRAM ALLADA</h1>
             <h3 class="typing"></h3>
@@ -107,19 +241,17 @@
             </p>
             <!-- SOCIAL ICONS HERE -->
             <div class="social-icons">
-                <a href="mailto:alladaabhiram@gmail.com">
+                <a href="mailto:alladaabhiram@gmail.com" aria-label="Email">
                     <i class="ri-mail-line"></i>
                 </a>
-
-                <a href="https://www.linkedin.com/in/abhiramallada" target="_blank">
+                <a href="https://www.linkedin.com/in/abhiramallada" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
                     <i class="ri-linkedin-box-fill"></i>
                 </a>
-
-                <a href="https://github.com/abhiramallada09" target="_blank">
+                <a href="https://github.com/abhiramallada09" target="_blank" rel="noopener" aria-label="GitHub">
                     <i class="ri-github-fill"></i>
                 </a>
-
-                <a href="tel:+919182465802">
+                <a href="tel:+919182465802" aria-label="Phone">
                     <i class="ri-phone-fill"></i>
                 </a>
             </div>
@@ -127,18 +259,19 @@
             <div class="hero-buttons">
                 <a href="abhiramallada_Resume.pdf" class="btn primary">View Resume</a>
                 <a href="abhiramallada_Resume.pdf" class="btn outline" download>Download Resume</a>
-
             </div>
         </div>
 
         <div class="hero-right" style="margin-top: 10px;">
-            <a href="https://ibb.co/G"><img src="https://i.ibb.co/4ny6QB2L/DSC-64044.png" alt="Abhiram Allada profile photo" border="0"></a>
+            <a href="https://ibb.co/G"><img src="https://i.ibb.co/4ny6QB2L/DSC-64044.png"
+                    alt="Abhiram Allada profile photo" border="0"></a>
         </div>
     </section>
 
+    <!-- 2. ABOUT -->
     <section id="about" class="section">
         <h2>About Me</h2>
-        <div
+        <div class="about-card"
             style="margin-top: 19px; line-height: 1.9; text-align: justify; font-family: 'Times New Roman', Times, serif; color: var(--text-muted);">
             <p>
                 Passionate Computer Science (Cybersecurity) student with hands-on experience in software development and
@@ -157,171 +290,370 @@
             <p style="margin-top: 5px;">
                 Led the development of “LifeLine-X: AI-Driven Defense System for Road Safety,” a project selected under
                 MSME 2025. It focuses on real-time
-                hazard detection, accident prevention, and intelligent traffic monitoring. The project, valued at ₹27
-                Lakhs with ₹15 Lakhs in government
+                hazard detection, accident prevention, and intelligent traffic monitoring. The project, valued at
+                &#8377;27
+                Lakhs with &#8377;15 Lakhs in government
                 funding support, reflects my ability to think at scale and design solutions with real-world impact.
             </p>
             <p style="margin-top: 5px;">
                 I bring strong problem-solving skills, a collaborative mindset, and a deep interest in building secure,
                 scalable, and meaningful technology solutions.
             </p>
-        </div>
-    </section>
-
-    <section id="education" class="section alt">
-        <h2>Education</h2>
-        <div class="card" style="margin-top: 19px;">
-            <h3 style="margin-bottom: 5px;">Ramachandra College of Engineering (Eluru)</h3>
-            <h4 style="margin-bottom: 5px;">Bachelor of Computer Science || 2023 - 2027</h4>
-            <p>Specialization in Cybersecurity</p>
-        </div>
-        <div class="card" style="margin-top: 19px;">
-            <h3 style="margin-bottom: 5px;">Narayana Junior College (Eluru)</h3>
-            <h4 style="margin-bottom: 5px;">Intermediate || 2021 - 2023</h4>
-            <p style="margin-bottom: 5px;">Focus on Mathematics</p>
-        </div>
-        <div class="card" style="margin-top: 19px;">
-            <h3 style="margin-bottom: 5px;">Sri Chaitanya School (Jangareddygudem)</h3>
-            <h4 style="margin-bottom: 5px;">SSC || 2021</h4>
-            <p style="margin-bottom: 5px;">Focus on Mathematics and Sports</p>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <div class="card" style="margin-top: 19px;">
-            <h3>Cybersecurity Intern</h3>
-            <h4 style="margin-bottom: 5px; margin-top: 5PX;">PRODIGY INFOTECH || Nov 2024 - Dec 2024 </h4>
-            <p>Worked on cryptography, image encryption, and password security. Gained exposure
-                to keyloggers and packet analysis.
+            <p style="margin-top: 5px;">As a Cybersecurity student, my goal is to continuously learn, experiment, and
+                develop expertise
+                in secure system design, network security, and emerging security technologies, and to build a
+                successful career
+                as a cybersecurity professional.
+            </p>
+            <p style="margin-top: 5px;">
+                Alongside my academic and cybersecurity journey, I am building my entrepreneurial path as the Founder
+                of NAVA Digital India, where I currently work on websites, web applications, mobile applications,
+                personal
+                portfolios, and digital marketing solutions for individuals and small businesses. While my current work
+                is
+                focused on building practical digital products and services, I see NAVA Digital India as a foundation
+                for my
+                long-term vision of combining software development and cybersecurity to create secure, scalable, and
+                meaningful
+                technology solutions.
             </p>
         </div>
     </section>
 
-    <section id="skills" class="section alt">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Cybersecurity</div>
-            <div class="skill-card">Ethical Hacking</div>
-            <div class="skill-card">HTML / CSS / JS</div>
-            <div class="skill-card">Linux</div>
-            <div class="skill-card">MySQL</div>
+    <!-- 3. EDUCATION (Timeline with connecting line and marker nodes) -->
+    <section id="education" class="section alt">
+        <h2>Education</h2>
+        <div class="timeline-container">
+            <div class="timeline-track" aria-hidden="true"></div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true">
+                    <div class="marker-dot"></div>
+                </div>
+                <div class="card timeline-content">
+                    <h3 style="margin-bottom: 5px;">Ramachandra College of Engineering (Eluru)</h3>
+                    <h4 style="margin-bottom: 5px;">Bachelor of Computer Science || 2023 - 2027</h4>
+                    <p>Specialization in Cybersecurity</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true">
+                    <div class="marker-dot"></div>
+                </div>
+                <div class="card timeline-content">
+                    <h3 style="margin-bottom: 5px;">Narayana Junior College (Eluru)</h3>
+                    <h4 style="margin-bottom: 5px;">Intermediate || 2021 - 2023</h4>
+                    <p style="margin-bottom: 5px;">Focus on Mathematics</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true">
+                    <div class="marker-dot"></div>
+                </div>
+                <div class="card timeline-content">
+                    <h3 style="margin-bottom: 5px;">Sri Chaitanya School (Jangareddygudem)</h3>
+                    <h4 style="margin-bottom: 5px;">SSC || 2021</h4>
+                    <p style="margin-bottom: 5px;">Focus on Mathematics and Sports</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- 4. EXPERIENCE (Timeline with connecting line and marker node) -->
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="timeline-container">
+            <div class="timeline-track" aria-hidden="true"></div>
+
+            <!-- Internship 1: Prodigy InfoTech -->
+            <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true">
+                    <div class="marker-dot"></div>
+                </div>
+                <div class="card timeline-content">
+                    <h3>Cybersecurity Intern</h3>
+                    <h4 style="margin-bottom: 5px; margin-top: 5PX;">PRODIGY INFOTECH || Nov 2024 - Dec 2024 </h4>
+                    <p>Worked on cryptography, image encryption, and password security. Gained exposure
+                        to keyloggers and packet analysis.
+                    </p>
+                    <a href="Prodigy InfoTech _Certificate_ABHIRAM_ALLADA_.pdf" class="badge view" target="_blank"
+                        rel="noopener">View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Internship 2: Thiranex -->
+            <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true">
+                    <div class="marker-dot"></div>
+                </div>
+                <div class="card timeline-content">
+                    <h3>Cyber Security Intern</h3>
+                    <h4 style="margin-bottom: 5px; margin-top: 5PX;">THIRANEX || May 2026 - Jun 2026</h4>
+                    <p>Successfully completed internship in Cyber Security focusing on skill development, secure
+                        systems, and future tech solutions.</p>
+                    <a href="Thiranex_Certificate_ABHIRAM_ALLADA_THX-MAY2226-306.pdf" class="badge view" target="_blank"
+                        rel="noopener">View Certificate</a>
+                </div>
+            </div>
+
+            <!-- Internship 3: Wingcode -->
+            <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true">
+                    <div class="marker-dot"></div>
+                </div>
+                <div class="card timeline-content">
+                    <h3>Professional Ethical Hacking Intern</h3>
+                    <h4 style="margin-bottom: 5px; margin-top: 5PX;">WINGCODE PARTNER PVT LTD || Jul 2026 - Aug 2026
+                    </h4>
+                    <p>Actively contributed to the Professional Ethical Hacking team with hands-on performance,
+                        problem-solving, and work ethic in cyber security and digital forensics.</p>
+                    <a href="wingcode_Certificate_ABHIRAM_ALLADA_.pdf" class="badge view" target="_blank"
+                        rel="noopener">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SKILLS -->
+    <section id="skills" class="section alt">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon-wrap"><i class="ri-terminal-box-line" aria-hidden="true"></i></div>
+                <span>Python</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap"><i class="ri-shield-keyhole-line" aria-hidden="true"></i></div>
+                <span>Cybersecurity</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap"><i class="ri-bug-line" aria-hidden="true"></i></div>
+                <span>Ethical Hacking</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap"><i class="ri-code-s-slash-line" aria-hidden="true"></i></div>
+                <span>HTML / CSS / JS</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap"><i class="ri-terminal-line" aria-hidden="true"></i></div>
+                <span>Linux</span>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap"><i class="ri-database-2-line" aria-hidden="true"></i></div>
+                <span>MySQL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PROJECTS (With icons & upgraded bottom details button) -->
     <section id="projects" class="section">
         <h2>Projects</h2>
         <div class="projects-grid">
+            <!-- Project 1: GuessProof AI - NAVA Digital -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3 class="project-title">LifeLineX</h3>
+                    <div class="project-icon-box">
+                        <i class="ri-shield-keyhole-line" aria-hidden="true"></i>
+                    </div>
+                    <span class="badge completed">Completed</span>
+                </div>
+                <h3 class="project-title">GuessProof AI - NAVA Digital</h3>
+                <p class="project-desc">
+                    &bull; Built a privacy-focused password security application that analyzes password strength,
+                    predictability, personal
+                    information/OSINT patterns, dictionary and keyboard patterns, leetspeak, breach exposure, and
+                    estimated attack time,
+                    while providing explainable security recommendations.
+                    <br><br>
+                    &bull; Developed a secure password and passphrase generator using CSPRNG-based randomization with
+                    character-category
+                    guarantees and predictable-pattern avoidance.
+                </p>
+                <div class="project-footer">
+                    <a href="https://guess-proof-ai.vercel.app" class="project-btn" target="_blank" rel="noopener">
+                        <span>Live demo: guess-proof-ai.vercel.app</span>
+                        <i class="ri-external-link-line" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Project 2: LifeLineX -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon-box">
+                        <i class="ri-shield-cross-line" aria-hidden="true"></i>
+                    </div>
                     <span class="badge ongoing">Ongoing</span>
                 </div>
+                <h3 class="project-title">LifeLineX</h3>
                 <p class="project-desc">AI-powered road safety system designed to detect serious accidents and quickly
                     alert emergency
                     contacts or nearby services. The idea focuses on reducing response time after road accidents and
                     improving safety for
                     riders and drivers. This concept was also recognized under the MSME innovation initiative.
                 </p>
-                <br>
-                <a href="LifeLineX.pdf" style="text-decoration: none;">Top to get full project details</a>
+                <div class="project-footer">
+                    <a href="LifeLineX.pdf" class="project-btn" target="_blank" rel="noopener">
+                        <span>Top to get full project details</span>
+                        <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
+
+            <!-- Project 3: Kisan AI -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3 class="project-title">Kisan AI</h3>
+                    <div class="project-icon-box">
+                        <i class="ri-plant-line" aria-hidden="true"></i>
+                    </div>
                     <span class="badge ongoing">Ongoing</span>
                 </div>
+                <h3 class="project-title">Kisan AI</h3>
                 <p class="project-desc">A smart agriculture assistant that helps farmers identify crop diseases and soil
                     health issues using
                     simple image analysis. The goal is to provide farmers with quick guidance and suggestions to improve
                     crop health and
                     increase productivity.
                 </p>
-                <br>
-                <a href="KisanAI.pdf" style="text-decoration: none;">Top to get full project details</a>
+                <div class="project-footer">
+                    <a href="KisanAI.pdf" class="project-btn" target="_blank" rel="noopener">
+                        <span>Top to get full project details</span>
+                        <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
+
+            <!-- Project 4: MediQueue -->
             <div class="project-card">
                 <div class="project-header">
-                    <h3 class="project-title">MediQueue</h3>
+                    <div class="project-icon-box">
+                        <i class="ri-hospital-line" aria-hidden="true"></i>
+                    </div>
                     <span class="badge ongoing">Ongoing</span>
                 </div>
+                <h3 class="project-title">MediQueue</h3>
                 <p class="project-desc">An intelligent hospital queue management idea that aims to reduce patient
                     waiting time and organize
                     appointments more efficiently. The system focuses on prioritizing urgent cases and improving
                     communication between patients
                     and hospitals.
                 </p>
-                <br>
-                <a href="MediQueue.pdf" style="text-decoration: none;">Top to get full project details</a>
+                <div class="project-footer">
+                    <a href="MediQueue.pdf" class="project-btn" target="_blank" rel="noopener">
+                        <span>Top to get full project details</span>
+                        <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 7. CERTIFICATIONS (Upgraded clean card grid boxes) -->
     <section id="certifications" class="section alt">
         <h2>Certifications</h2>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Foundations of Cybersecurity by Google</p>
-                <a href="(Foundations of Cybersecurity) by Coursera.pdf" class="badge view">View</a>
+        <div class="cert-grid">
+            <div class="card cert-box">
+                <div class="cert-box-icon">
+                    <i class="ri-medal-line" aria-hidden="true"></i>
+                </div>
+                <div class="cert-box-content">
+                    <p class="cert-box-text">Foundations of Cybersecurity by Google</p>
+                    <a href="(Foundations of Cybersecurity) by Coursera.pdf" class="badge view" target="_blank"
+                        rel="noopener">View</a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Networks and Network Security by Google</p>
-                <a href="(Networks and Network Security) by Coursera.pdf" class="badge view">View</a>
+
+            <div class="card cert-box">
+                <div class="cert-box-icon">
+                    <i class="ri-shield-keyhole-line" aria-hidden="true"></i>
+                </div>
+                <div class="cert-box-content">
+                    <p class="cert-box-text">Networks and Network Security by Google</p>
+                    <a href="(Networks and Network Security) by Coursera.pdf" class="badge view" target="_blank"
+                        rel="noopener">View</a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Certified Ethical Hacker by ResilientShield</p>
-                <a href="Ethical Hacking.pdf" class="badge view">View</a>
+
+            <div class="card cert-box">
+                <div class="cert-box-icon">
+                    <i class="ri-bug-line" aria-hidden="true"></i>
+                </div>
+                <div class="cert-box-content">
+                    <p class="cert-box-text">Certified Ethical Hacker by ResilientShield</p>
+                    <a href="Ethical Hacking.pdf" class="badge view" target="_blank" rel="noopener">View</a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Python by Cisco</p>
-                <a href="PythonEssentials.pdf" class="badge view">View</a>
+
+            <div class="card cert-box">
+                <div class="cert-box-icon">
+                    <i class="ri-terminal-box-line" aria-hidden="true"></i>
+                </div>
+                <div class="cert-box-content">
+                    <p class="cert-box-text">Python by Cisco</p>
+                    <a href="PythonEssentials.pdf" class="badge view" target="_blank" rel="noopener">View</a>
+                </div>
             </div>
         </div>
     </section>
-    <!-- WORKSHOP SECTION  -->
+
+    <!-- 8. WORKSHOP (Upgraded clean card grid boxes) -->
     <section id="workshop" class="section alt">
         <h2>Workshop</h2>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Ethical Hacker on RAT Tools </p>
-                <a href="RAT Tools.pdf" class="badge view">View</a>
+        <div class="workshops-grid">
+            <div class="card workshop-box">
+                <div class="workshop-box-icon">
+                    <i class="ri-terminal-line" aria-hidden="true"></i>
+                </div>
+                <div class="workshop-box-content">
+                    <p class="workshop-box-text">Ethical Hacker on RAT Tools </p>
+                    <a href="RAT Tools.pdf" class="badge view" target="_blank" rel="noopener">View</a>
+                </div>
             </div>
-        </div>
 
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Cyber Security and Digital Forensics</p>
-                <a href="CS&DF.pdf" class="badge view">View</a>
+            <div class="card workshop-box">
+                <div class="workshop-box-icon">
+                    <i class="ri-shield-line" aria-hidden="true"></i>
+                </div>
+                <div class="workshop-box-content">
+                    <p class="workshop-box-text">Cyber Security and Digital Forensics</p>
+                    <a href="CS&DF.pdf" class="badge view" target="_blank" rel="noopener">View</a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Cyber Security & Ethical Hacking Workshop</p>
-                <a href="CS&EH Workshop.pdf" class="badge view">View</a>
-            </div>
-        </div>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Java Full Stack with React JS & AI</p>
-                <a href="Java&React.pdf" class="badge view">View</a>
-            </div>
-        </div>
-        <div class="card" style="margin-top: 19PX;">
-            <div class="certification-header">
-                <p>Full Stack Development</p>
-                <a href="FSD.pdf" class="badge view">View</a>
-            </div>
-        </div>
 
+            <div class="card workshop-box">
+                <div class="workshop-box-icon">
+                    <i class="ri-lock-password-line" aria-hidden="true"></i>
+                </div>
+                <div class="workshop-box-content">
+                    <p class="workshop-box-text">Cyber Security & Ethical Hacking Workshop</p>
+                    <a href="CS&EH Workshop.pdf" class="badge view" target="_blank" rel="noopener">View</a>
+                </div>
+            </div>
+
+            <div class="card workshop-box">
+                <div class="workshop-box-icon">
+                    <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+                </div>
+                <div class="workshop-box-content">
+                    <p class="workshop-box-text">Java Full Stack with React JS & AI</p>
+                    <a href="Java&React.pdf" class="badge view" target="_blank" rel="noopener">View</a>
+                </div>
+            </div>
+
+            <div class="card workshop-box">
+                <div class="workshop-box-icon">
+                    <i class="ri-window-line" aria-hidden="true"></i>
+                </div>
+                <div class="workshop-box-content">
+                    <p class="workshop-box-text">Full Stack Development</p>
+                    <a href="FSD.pdf" class="badge view" target="_blank" rel="noopener">View</a>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- 9. CONTACT -->
     <section id="contact" class="section">
         <h2>Contact</h2>
         <div class="contact-container">
@@ -331,11 +663,11 @@
                         <i class="ri-mail-line"></i>
                         alladaabhiram@gmail.com
                     </a>
-                    <a href="https://www.linkedin.com/in/abhiramallada" target="_blank">
+                    <a href="https://www.linkedin.com/in/abhiramallada" target="_blank" rel="noopener">
                         <i class="ri-linkedin-box-fill"></i>
                         LinkedIn
                     </a>
-                    <a href="https://github.com/abhiramallada09" target="_blank">
+                    <a href="https://github.com/abhiramallada09" target="_blank" rel="noopener">
                         <i class="ri-github-fill"></i>
                         GitHub
                     </a>
@@ -344,7 +676,6 @@
                         +91 9182465802
                     </a>
                 </div>
-
             </div>
             <div class="contact-right">
                 <form id="contact-form">
@@ -357,9 +688,11 @@
             </div>
         </div>
     </section>
+
     <footer>
-        © 2026 ABHIRAM ALLADA <span class="dot">•</span> Turning ideas into clean solutions.
+        &copy; 2026 ABHIRAM ALLADA <span class="dot">&bull;</span> Turning ideas into clean solutions.
     </footer>
+
     <script src="script.js"></script>
 </body>
 
