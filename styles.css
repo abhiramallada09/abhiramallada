@@ -1166,3 +1166,18 @@ h4 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Brand link with website's signature Navy Blue */
+.navy-brand-link {
+    color: #1e3a5f;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s ease;
+}
+.navy-brand-link:hover {
+    opacity: 0.85;
+}
+body.dark-theme .navy-brand-link {
+    color: #60a5fa;
+}
